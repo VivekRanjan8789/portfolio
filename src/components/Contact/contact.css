@@ -1,0 +1,127 @@
+#contactPage{
+    min-height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 65rem;
+
+    margin: 0 auto;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+
+}
+
+#clients{
+    width: 100vw;
+    max-width: 65rem;
+    margin: 3rem auto;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.contactPageTitle{
+    font-size: 3.5rem;
+    font-weight: 500;
+    margin: 1rem 1.5rem;
+}
+
+.clientDesc{
+    max-width: 50rem;
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.clientImgs{
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+
+}
+
+.clientImg{
+    height: 5rem;
+    width: 13rem;
+    border: 1px solid grey;
+    margin: 1rem;
+    padding: 1rem;
+    object-fit: cover;
+}
+
+/*************************CONTACT FORM STYLING*********************/
+
+.contactPageTitle{
+    font-weight: 600;
+}
+
+.contactDesc{
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 1rem;
+    
+}
+
+.contactForm{
+    /* background-color: aqua; */
+    width: 90vw;
+    max-width: 60rem;
+    margin: 2.5rem auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.contactForm .name, .email, .msg {
+     font-size: medium;
+     width: 100%;
+     max-width: 40rem;
+     margin: 0.5rem;
+     padding: 0.5rem 1rem;
+     color: white;
+     border: none;
+     border-radius:0.5rem;
+     background-color: rgb(40, 40, 40);
+}
+
+.submitBtn{
+    font-weight: 500;
+    border: none;
+    margin:2rem;
+    padding: 0.75rem 3.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
+.links{
+    /* background-color: antiquewhite; */
+    width: 80vw;
+    max-width: 30rem;
+    margin: 2 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.link{
+    object-fit: cover;
+    margin: 3px;
+    width:3rem;
+    height: 3rem;
+}
+
+@media screen and (max-width: 482px) {
+    .clientImg{
+        width:8rem;
+        height: 4rem;
+        object-fit: cover;
+    }
+}
+

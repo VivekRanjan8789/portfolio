@@ -1,0 +1,161 @@
+#intro{
+    height: calc(100vh - 5rem);
+    width:100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+
+    position: relative;
+    /* background-color: aquamarine; */
+}
+
+.bg{
+    position: absolute;
+    top: -2rem;
+    right:-10rem;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.introcontent{
+    height: 100vh;
+    width: 100vw;
+    padding: 2rem;
+    font-size:3rem;
+    font-weight: 700;
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.hello{
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.name{
+    color: yellow;
+}
+
+.intropara{
+    font-size: small;
+    font-weight: 200;
+    /* color:lightslategray; */
+}
+ 
+.btn{
+    background-color: white;
+    margin: 1rem 0;
+    padding: 0.75rem 1.25rem;
+    border: none;
+    border-radius: 2rem;
+
+    display: flex;
+    gap: .5rem;
+}
+
+
+@media  screen and (max-width: 1050px){
+    .bg{
+      right: -20rem;
+    }
+
+  }
+
+  @media  screen and (max-width: 670px){
+    /* .bg{
+      right: -20rem;
+    } */
+
+  }
+
+  /* @media  screen and (max-width: 505px){
+    .intro{
+        width: 100vw;
+        height:100vh;
+        overflow: hidden;
+    }
+    .bg{
+        right: -20rem;
+      }
+    body{
+        width: 100vw;
+    }
+  } */
+
+
+
+/* .intro{
+    width: 100vw;
+    height: calc(100vh - 9rem);
+    padding:2rem 7rem;
+    box-sizing: border-box;
+    color: white;
+
+    position: relative;
+}
+
+.bg{
+    position:absolute;
+    top: -1rem;
+    height: 40rem;
+    right:5rem;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.introcontent{
+    height: 100%;
+    width:100vw;
+    padding: 4rem 0;
+    box-sizing: border-box;
+    font-size: 3.5rem;;
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+}
+
+.hello{
+    font-size:1.3rem;
+}
+
+.name{
+    color: yellow;
+}
+
+.intropara{
+    font-size:1rem;
+    color:lightslategrey;
+    letter-spacing: 1px;
+}
+
+.hirebtn{
+    margin-top: 1.5rem;
+}
+
+.btn{
+    height:3.7rem;
+    width:9.3rem;
+    box-sizing: border-box;
+    font-size: 1rem;
+    border:none;
+    padding: 1rem 1.2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: slateblue;
+}
+
+.btnimg{
+    font-size: 1.5rem;;
+} */
