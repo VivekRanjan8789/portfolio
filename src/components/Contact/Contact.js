@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './contact.css'
+import emailjs from '@emailjs/browser';
 
 import walmart from '../../assets/walmart.png';
 import facebook from '../../assets/facebook.png';
@@ -12,6 +13,28 @@ import youtubeIcon from '../../assets/youtubeIcon.png'
 
 
 const Contact = () => {
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+    .sendForm('service_511zw8w', 'template_ca983hq', form.current, {
+      publicKey: 'C3IizdMzC-YIM921X',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+
+
+
   return (
     <> <div id="contactPage">
             <div id="clients">
@@ -31,11 +54,11 @@ const Contact = () => {
             <div id="contact">
                   <h2 className="contactPageTitle">Contact Me</h2>
                   <span className="contactDesc">please fill out the form below to discuss any work opportunities</span>
-                  <form className="contactForm">
-                         <input type="text" className="name" placeholder='Your Name'/>
-                         <input type="email" className="email" placeholder='Your Email'/>
+                  <form className="contactForm" ref={form}  onSubmit={sendEmail}>
+                         <input type="text" className="name" placeholder='Your Name' name='user_name'/>
+                         <input type="email" className="email" placeholder='Your Email' name='user_email'/>
                          <textarea name="message"  rows="5" className='msg' placeholder='Your Message'></textarea>
-                         <button type="submit" value="send" className="submitBtn" >Submit</button>
+                         <button type="submit" value="Send" className="submitBtn">Submit</button>
                          <div className="links">
                                 <img src={facebookIcon} alt="" className="link" />
                                 <img src={instagramIcon} alt="" className="link insta" />
